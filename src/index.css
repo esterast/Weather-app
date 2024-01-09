@@ -1,13 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:ital,wght@0,300;1,300&family=Montserrat:wght@100&family=Playfair+Display&family=Roboto+Mono:wght@200&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-image: url("./img/background_img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lora', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
+}
+
+input {
+  padding: 10px 30px;
+  margin-top: 10px;
+  font-size: 30px;
+  border: 1px solid black;
+  background: rgba(71, 68, 65, 0.3);
+  border-radius: 70px;
+  transition: 0.2s;
+  color: #ffffff80;
+}
+
+input::placeholder {
+  color: #ffffff80;
+}
+
+input:focus {
+  border: 1px solid rgba(128, 128, 128, 0.089);
+  padding: 13px 60px;
+}
+
+.content {  
+  padding: 10px;
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;  
+  align-items: self-start;
+}
+
+.location {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.temp {
+  font-size: 60px;
+}
+
+.feels-like {
+  font-size: 40px;
+  font-weight: 50;
+}
+
+.feels-like span {
+  font-weight: 900;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.description p {
+  padding-right: 5px;
+}
+
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+  color: #333030;
+  background-color: rgba(187, 172, 168, 0.3);
+}
+
+.bottom-container p {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.bottom-container span {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.second-row {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .bottom-container {
+    margin-top: 50px;
+  }
+  .first-row {
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .second-row {
+    flex-direction: column;
+    align-items: start;
+  }
 }
